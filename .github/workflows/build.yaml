@@ -1,0 +1,53 @@
+name: Build Liquid Linux ISO
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+    inputs:
+      dev:
+        description: "Run as development?"
+        type: boolean
+        required: true
+        default: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    permissions:
+      contents: write
+
+    container:
+      image: archlinux:latest
+      options: --privileged
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set current date as environment variable
+        run: echo "DATE=$(date +'%Y.%m.%d')" >>$GITHUB_ENV
+
+      - name: Run build script
+        run: bash build_iso.sh
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.dev == 'true' }}
+        with:
+          name: Liquid Linux ${{ env.DATE }}
+          path: |
+            liquid-${{ env.DATE }}-x86_64.iso
+            CHECKSUMS.txt
+
+      - name: Create tag and release
+        uses: softprops/action-gh-release@v0.1.14
+        if: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && github.event.inputs.dev == 'false') }}
+        with:
+          name: Liquid Linux ${{ env.DATE }}
+          tag_name: ${{ env.DATE }}
+          body_path: CHECKSUMS.txt
+          files: |
+            liquid-${{ env.DATE }}-x86_64.iso
+            CHECKSUMS.txt
