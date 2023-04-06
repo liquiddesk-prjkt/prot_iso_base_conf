@@ -41,10 +41,10 @@ build() {
   	step "Building ISO..." "mkarchiso -v -w work/ -o ./ configs/wip-conf"
   	step "Generating checksums text file..." "
 		cat <<-EOL >CHECKSUMS.txt
-			b2sum  $(b2sum "liquid-$DATE-x86_64.iso")
-			md5sum  $(md5sum "liquid-$DATE-x86_64.iso")
-			sha1sum  $(sha1sum "liquid-$DATE-x86_64.iso")
-			sha256sum  $(sha256sum "liquid-$DATE-x86_64.iso")
+			b2sum  $(b2sum "liquidlinux-$DATE-x86_64.iso")
+			md5sum  $(md5sum "liquidlinux-$DATE-x86_64.iso")
+			sha1sum  $(sha1sum "liquidlinux-$DATE-x86_64.iso")
+			sha256sum  $(sha256sum "liquidlinux-$DATE-x86_64.iso")
 		EOL
   	"
 }

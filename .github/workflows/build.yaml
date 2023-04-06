@@ -38,7 +38,7 @@ jobs:
         with:
           name: Liquid Linux ${{ env.DATE }}
           path: |
-            liquid-${{ env.DATE }}-x86_64.iso
+            liquidlinux-${{ env.DATE }}-x86_64.iso
             CHECKSUMS.txt
 
       - name: Create tag and release
@@ -49,5 +49,5 @@ jobs:
           tag_name: ${{ env.DATE }}
           body_path: CHECKSUMS.txt
           files: |
-            liquid-${{ env.DATE }}-x86_64.iso
+            liquidlinux-${{ env.DATE }}-x86_64.iso
             CHECKSUMS.txt
