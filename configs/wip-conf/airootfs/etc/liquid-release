@@ -1,5 +1,4 @@
-LSB_VERSION=1.4
-DISTRIB_ID=LiquidOS
-DESCRIPTION="A Custom distribution based on archlinux designed for productivity with minimal user interface"
-DISTRIB_RELEASE=rolling
-DISTRIB_DESCRIPTION="this is a prototype iso base"
+LSB_VERSION=0.1
+DISTRIB_ID="LiquidOS"
+DISTRIB_RELEASE="rolling"
+DISTRIB_DESCRIPTION="Liquid Linux"

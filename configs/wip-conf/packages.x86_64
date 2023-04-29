@@ -1,3 +1,4 @@
+# Archlinux Default Packages
 alsa-utils
 amd-ucode
 arch-install-scripts
@@ -59,8 +60,8 @@ man-db
 man-pages
 mc
 mdadm
-memtest86+
-memtest86+-efi
+#memtest86+
+#memtest86+-efi
 mkinitcpio
 mkinitcpio-archiso
 mkinitcpio-nfs-utils
@@ -112,7 +113,6 @@ usb_modeswitch
 usbmuxd
 usbutils
 vim
-virtualbox-guest-utils-nox
 vpnc
 wireless-regdb
 wireless_tools
@@ -122,28 +122,71 @@ xfsprogs
 xl2tpd
 zsh
 
-bash-completion
-packagekit-qt5
-partitionmanager
-os-prober
-
-git
-base-devel
-neofetch
-networkmanager
-
-bluedevil
-bluez-qt
-kirigami2
-plasma-nm
-plasma-pa
+# Extras
 qt5-quickcontrols2
+partitionmanager
+bash-completion
+neofetch-liquid
+packagekit-qt5
+networkmanager
+base-devel
+os-prober
+kirigami2
+git
 
-maui-shell-git
-maui-core-git
-maui-settings-git
-mauikit-calendar-git
-mauikit-filebrowsing-git
-mauikit-git
-mauiman-git
-cask-server-git
+# Display Manager
+xorg
+xorg-fonts-encodings
+sddm
+
+# Desktop Environmetn
+cutede
+cutefish-sddm-theme
+cutefish-calculator
+cutefish-filemanager
+cutefish-icons
+cutefish-kwin-plugins
+cutefish-launcher
+cutefish-qt-plugins
+cutefish-screenlocker
+cutefish-statusbar
+cutefish-wallpapers
+liquid-branding-wallpapers
+
+# Fonts
+noto-fonts
+noto-fonts-cjk
+noto-fonts-extra
+noto-fonts-emoji
+awesome-terminal-fonts
+adobe-source-code-pro-fonts
+ttf-material-design-icons
+
+# Touchpad and Mouse
+xorg-xinput
+xf86-input-libinput
+
+# GPU Drivers (Intel/AMD/Nvidia/VM) (OpenSource)
+xf86-video-fbdev
+xf86-video-vesa
+xf86-video-intel
+xf86-video-amdgpu
+xf86-video-ati
+xf86-video-nouveau
+mesa-utils
+mesa
+
+# Hypervisors
+virtualbox-guest-utils
+qemu-guest-agent
+open-vm-tools
+xf86-input-vmmouse
+xf86-video-vmware
+
+# Bluetooth
+bluez
+bluez-qt
+bluedevil
+bluez-libs
+bluez-utils
+pulseaudio-bluetooth

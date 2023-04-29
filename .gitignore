@@ -10,3 +10,5 @@ out/
 *.pem
 user-data
 meta-data
+
+CHECKSUMS.txt
