@@ -1,0 +1,7 @@
+NAME="Liquid Linux"
+ID=liquid
+ID_LIKE=arch
+PRETTY_NAME="Liquid Linux"
+ANSI_COLOR="1;30"
+HOME_URL="https://liquiddesk-prjkt.github.io/"
+SUPPORT_URL="https://liquiddesk-prjkt.github.io/"
