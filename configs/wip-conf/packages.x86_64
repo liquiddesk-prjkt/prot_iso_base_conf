@@ -123,6 +123,7 @@ xl2tpd
 zsh
 
 # Extras
+syntax-highligting
 qt5-quickcontrols2
 partitionmanager
 bash-completion
@@ -139,16 +140,11 @@ xorg
 xorg-fonts-encodings
 sddm
 
-# Desktop Environmetn
+# Desktop Environment
 cutede
 cutefish-sddm-theme
-cutefish-calculator
-cutefish-filemanager
 cutefish-icons
-cutefish-kwin-plugins
-cutefish-launcher
 cutefish-qt-plugins
-cutefish-screenlocker
 cutefish-wallpapers
 liquid-branding-wallpapers
 
